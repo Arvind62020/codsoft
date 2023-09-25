@@ -13,16 +13,16 @@ class Bank {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
-            System.out.println("Deposit successful. New balance: $" + balance);
+            System.out.println("Deposit successful. \n CURRENT Balance: $" + balance);
         } else {
-            System.out.println("Invalid deposit amount.");
+            System.out.println("deposit amount Invalid");
         }
     }
 
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
-            System.out.println("Withdrawal successful. New balance: $" + balance);
+            System.out.println("Withdrawal successful. CURRENT balance: $" + balance);
         } else if (amount <= 0) {
             System.out.println("Invalid withdrawal amount.");
         } else {
@@ -33,14 +33,14 @@ class Bank {
 public class atm_software {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double initialBalance = 1000.0; // Initial account balance
+        double initialBalance = 1000.0; 
         Bank account = new Bank(initialBalance);
 
         while (true) {
-            System.out.println("Welcome to the ATM!");
+            System.out.println("ATM MECHINE OF MY BANK!");
             System.out.println("1. Check Balance");
-            System.out.println("2. Deposit");
-            System.out.println("3. Withdraw");
+            System.out.println("2. Deposit Balance");
+            System.out.println("3. Withdraw Balance");
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
 
@@ -48,7 +48,7 @@ public class atm_software {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Your balance is: $" + account.getBalance());
+                    System.out.println("CURRENT Balance is: $" + account.getBalance());
                     break;
                 case 2:
                     System.out.print("Enter the deposit amount: $");

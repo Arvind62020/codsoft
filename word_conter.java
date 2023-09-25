@@ -9,7 +9,7 @@ public class word_conter {
         Scanner sc = new Scanner(System.in);
         System.out.println("Word Counter");
 
-        System.out.println("Choose an option: \n 1> Enter text\n 2> Provide a file");
+        System.out.println("Choose any option: \n 1> Enter text\n 2> Provide a file");
         
         int n=sc.nextInt();
         sc.nextLine();
